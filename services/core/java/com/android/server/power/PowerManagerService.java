@@ -2471,6 +2471,7 @@ public final class PowerManagerService extends SystemService
                             } else if (isValidButtonOrKeyboardBrightness(mKeyboardBrightness)) {
                                  keyboardBrightness = mKeyboardBrightness;
                             }
+                            if(mKeyboardLight!=null)
                             mKeyboardLight.setBrightness(mKeyboardVisible ?
                                     keyboardBrightness : PowerManager.BRIGHTNESS_OFF_FLOAT);
                         }
@@ -2482,7 +2483,7 @@ public final class PowerManagerService extends SystemService
                                 if(mButtonsLight!=null)
                                 mButtonsLight.setBrightness(PowerManager.BRIGHTNESS_OFF_FLOAT);
                                 mButtonOn = false;
-
+                                if(mKeyboardLight!=null)
                                 mKeyboardLight.setBrightness(PowerManager.BRIGHTNESS_OFF_FLOAT);
                             }
                         }

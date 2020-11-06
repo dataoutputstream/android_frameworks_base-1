@@ -866,6 +866,7 @@ final class DisplayPowerController implements AutomaticBrightnessController.Call
             mBrightnessReasonTemp.setReason(BrightnessReason.REASON_SCREEN_OFF);
             if (mLights.getLight(LightsManager.LIGHT_ID_BUTTONS)!=null)
             mLights.getLight(LightsManager.LIGHT_ID_BUTTONS).setBrightness(brightnessState);
+            if (mLights.getLight(LightsManager.LIGHT_ID_KEYBOARD)!=null)
             mLights.getLight(LightsManager.LIGHT_ID_KEYBOARD).setBrightness(brightnessState);
         }
 
@@ -874,6 +875,7 @@ final class DisplayPowerController implements AutomaticBrightnessController.Call
             if (mLights.getLight(LightsManager.LIGHT_ID_BUTTONS)!=null)
             mLights.getLight(LightsManager.LIGHT_ID_BUTTONS)
                     .setBrightness(PowerManager.BRIGHTNESS_OFF_FLOAT);
+            if (mLights.getLight(LightsManager.LIGHT_ID_KEYBOARD)!=null)
             mLights.getLight(LightsManager.LIGHT_ID_KEYBOARD)
                     .setBrightness(PowerManager.BRIGHTNESS_OFF_FLOAT);
         }
